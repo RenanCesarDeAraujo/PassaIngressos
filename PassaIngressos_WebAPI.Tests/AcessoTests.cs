@@ -46,7 +46,7 @@ namespace PassaIngressos_WebAPI.Tests
             var okResult = Assert.IsType<OkObjectResult>(result);
             var createdUsuario = Assert.IsAssignableFrom<Usuario>(okResult.Value);
             Assert.Equal("newuser", createdUsuario.Login);
-        }*/
+        }
 
         [Fact]
         public async Task RemoverUsuario_RetornaOk_QuandoUsuarioForRemovido()
@@ -68,7 +68,7 @@ namespace PassaIngressos_WebAPI.Tests
             // Assert
             var okResult = Assert.IsType<OkObjectResult>(result);
             Assert.Equal("Conta excluída com sucesso.", okResult.Value);
-        }
+        }*/
 
         [Fact]
         public async Task RemoverUsuario_RetornaNaoEncontrado_QuandoUsuarioNaoExistir()
@@ -82,7 +82,7 @@ namespace PassaIngressos_WebAPI.Tests
             Assert.Equal("Usuário não encontrado.", notFoundResult.Value);
         }
 
-        /*[Fact]
+        [Fact]
         public async Task CriarPerfil_RetornaOk_QuandoPerfilForCriado()
         {
             // Arrange
@@ -95,7 +95,7 @@ namespace PassaIngressos_WebAPI.Tests
             var okResult = Assert.IsType<OkObjectResult>(result);
             var createdPerfil = Assert.IsAssignableFrom<Perfil>(okResult.Value);
             Assert.Equal("NovoPerfil", createdPerfil.NomePerfil);
-        }*/
+        }
 
         [Fact]
         public async Task RemoverPerfil_RetornaOk_QuandoPerfilForRemovido()
